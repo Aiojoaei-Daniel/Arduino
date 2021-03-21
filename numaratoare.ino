@@ -1,8 +1,3 @@
-// sa numere de cate ori se aprinde un led
-//folosesc toti digitii, poate numara pana la 9999
-// 0001..0002...0003...
-
-
 int led1= 2;
 
 int ledA=3;
