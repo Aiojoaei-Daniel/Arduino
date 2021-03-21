@@ -1,9 +1,3 @@
-// ca doar nu e prost
-// deci o sa fie rosu la pietoni si verde/galben? la masini, dupa verde pietoni rosu masini si la final verde masini(30 sec) si dupa  
-//masinile pot trece tot timpul cat e galben(pietonul are rosu)
-// dupa ce pietonul apasa butonul, semafoarele se fac galben intermitent ambele // dupa verde pieton, rosu masini
-//dupa galben intermitent la ambele // dupa verde masini // rosu pietonoi // urmand iar galben masini rosu pietoni
-// sa adaug si buzzer pentru cand mai este putin sa se termine o culoare la pietoni
 int ledg=7;
 int ledg2=10;
 int ledr=5;
@@ -27,7 +21,7 @@ void setup() {
   pinMode(ledr2, OUTPUT);
   pinMode(ledo2, OUTPUT);
   pinMode(ledg2, OUTPUT);
-  pinMode(readp, INPUT);    // digital read
+  pinMode(readp, INPUT);   
   Serial.begin(9600);
 }
 
@@ -48,7 +42,7 @@ void loop() {
     delayMicroseconds(time1);
     valb=digitalRead(readp); 
   }
-  if(valb==0){                          //   portocaliu pentru masina si sofer cateva secunde
+  if(valb==0){                          //   portocaliu pentru masina si sofer pentru cateva secunde
     while(n<=15){
     digitalWrite(ledo, HIGH);   //masina
     delay(time2);
@@ -77,7 +71,7 @@ void loop() {
     n++;
   }
 
-    while(n<=1516){                      // portocaliu pentru masina si sofer cateva secunde
+    while(n<=1516){                      // portocaliu pentru masina si sofer pentru cateva secunde
     digitalWrite(ledo, HIGH);   //masina
     delay(time2);
     digitalWrite(ledo, LOW);
