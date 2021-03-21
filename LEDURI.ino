@@ -1,5 +1,3 @@
-//ar trebui sa faca ce face joc_leduri prima varianta
-//varinta mai scurta a joc de leduri
 int led1=2;
 int led2=3;
 int led3=4;
